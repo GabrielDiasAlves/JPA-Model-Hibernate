@@ -1,5 +1,6 @@
 package modelo.umparamuitos;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,11 @@ public class ItemPedido {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(nullable = false)
 	private int quantidade;
+	
+	@Column(nullable = false)
 	private Double preco;
 
 	@ManyToOne
@@ -66,7 +71,7 @@ public class ItemPedido {
 		}
 	}
 
-	public ItemPedido(int quantidade, Double preco, Pedido pedido) {
+	public ItemPedido(Pedido pedido, Produto produto, int quantidade) {
 		super();
 		this.setQuantidade(quantidade);
 		this.setPedido(pedido);
