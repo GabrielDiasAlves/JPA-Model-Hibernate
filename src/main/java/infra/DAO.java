@@ -53,6 +53,11 @@ public class DAO<E> {
 		return this.abrirT().incluir(entidade).fecharT();
 	}
 
+	// Obter por ID
+	public E obterPorId(Object id) {
+		return em.find(classe, id);
+	}
+
 	// Obter todos sempre limitado a 10
 	public List<E> obterTodos() {
 		return this.obterTodos(10, 0);
@@ -76,5 +81,4 @@ public class DAO<E> {
 	public void fechar() {
 		em.close();
 	}
-
 }
