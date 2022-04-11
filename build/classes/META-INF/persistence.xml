@@ -6,12 +6,18 @@
 	<persistence-unit name="exercicios-jpa">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		
+		<mapping-file>META-INF/consultas.xml</mapping-file>
+		
 		<class>modelo.basico.Usuario</class>
 		<class>modelo.basico.Produto</class>
 		<class>modelo.umparaum.Assento</class>
 		<class>modelo.umparaum.Cliente</class>
 		<class>modelo.umparamuitos.Pedido</class>
 		<class>modelo.umparamuitos.ItemPedido</class>
+		<class>modelo.muitospramuitos.Tio</class>
+		<class>modelo.muitospramuitos.Sobrinho</class>
+		<class>modelo.muitospramuitos.Filme</class>
+		<class>modelo.muitospramuitos.Ator</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
