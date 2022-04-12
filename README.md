@@ -1,1 +1,1 @@
-JPA-Model2
+Modelos e exmeplos de utilizzação do framewor Hibernate
