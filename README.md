@@ -1,1 +1,1 @@
-Modelos e exmeplos de utilizzação do framewor Hibernate
+Modelos e exmeplos de utilizzação do framework Hibernate
